@@ -37,7 +37,7 @@
       .screen {
         display: none;
         animation: fadeIn 0.4s ease;
-      }c
+      }
 
       .screen.active {
         display: block;
@@ -138,7 +138,7 @@
         transform: scale(0.97);
       }
 
-      .btn-primary:dabled {
+      .btn-primary:disabled {
         opacity: 0.5;
         cursor: not-allowed;
         transform: none;
@@ -727,7 +727,7 @@
         <div class="logo-icon">📘</div>
         <h1>اختبار مقدمة في الدفاعيات</h1>
         <p class="subtitle">
-          38 سؤالاً · 25 دقيقة · متاح من 8:30 م إلى 11 م بتوقيت
+          38 سؤالاً · 25 دقيقة · متاح من 8:30 م إلى 11:30 م بتوقيت
           القاهرة
         </p>
 
@@ -1338,9 +1338,9 @@
       // ================================================================
       //  DOM REFS
       // ================================================================
-      const screen1 = document.ElementById("screen1");
-      const screen2 = document.ElementById("screen2");
-      const screen3 = document.ElementById("screen3");
+      const screen1 = document.getElementById("screen1");
+      const screen2 = document.getElementById("screen2");
+      const screen3 = document.getElementById("screen3");
       const userNameInput = document.getElementById("userName");
       const userPhoneInput = document.getElementById("userPhone");
       const btnStart = document.getElementById("btnStart");
@@ -1396,7 +1396,7 @@
         const closeMinutes = CLOSE_HOUR * 60 + CLOSE_MINUTE;
         return {
           isOpen:
-           true,
+            true,
           currentMinutes,
           openMinutes,
           closeMinutes,
