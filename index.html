@@ -1338,9 +1338,9 @@
       // ================================================================
       //  DOM REFS
       // ================================================================
-      const screen1 = document.getElementById("screen1");
-      const screen2 = document.getElementById("screen2");
-      const screen3 = document.getElementById("screen3");
+      const screen1 = document.ElementById("screen1");
+      const screen2 = document.ElementById("screen2");
+      const screen3 = document.ElementById("screen3");
       const userNameInput = document.getElementById("userName");
       const userPhoneInput = document.getElementById("userPhone");
       const btnStart = document.getElementById("btnStart");
@@ -1397,7 +1397,7 @@
         const closeMinutes = CLOSE_HOUR * 60 + CLOSE_MINUTE;
         return {
           isOpen:
-            currentMinutes >= openMinutes && currentMinutes < closeMinutes,
+           true,
           currentMinutes,
           openMinutes,
           closeMinutes,
