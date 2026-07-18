@@ -1,0 +1,1860 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📘 Apologetics Quiz Book 1 – 38 سؤالاً</title>
+    <style>
+      /* ===== RESET & BASE ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #1a202c;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        width: 100%;
+        max-width: 960px;
+        padding: 32px 36px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .screen {
+        display: none;
+        animation: fadeIn 0.4s ease;
+      }
+
+      .screen.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ===== SCREEN 1 – LOGIN ===== */
+      #screen1 {
+        text-align: center;
+        padding: 24px 0 8px;
+      }
+
+      #screen1 .logo-icon {
+        font-size: 56px;
+        margin-bottom: 8px;
+      }
+
+      #screen1 h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 6px;
+      }
+
+      #screen1 .subtitle {
+        font-size: 16px;
+        color: #718096;
+        margin-bottom: 32px;
+      }
+
+      .form-group {
+        text-align: right;
+        margin-bottom: 20px;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        color: #2d3748;
+        margin-bottom: 6px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        font-size: 16px;
+        transition: border 0.2s;
+        background: #f7fafc;
+        font-family: inherit;
+      }
+
+      .form-group input:focus {
+        border-color: #4a6cf7;
+        outline: none;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(74, 108, 247, 0.12);
+      }
+
+      .btn-primary {
+        background: #4a6cf7;
+        color: #fff;
+        border: none;
+        padding: 16px 48px;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: all 0.25s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        box-shadow: 0 6px 20px rgba(74, 108, 247, 0.35);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(74, 108, 247, 0.45);
+      }
+
+      .btn-primary:active {
+        transform: scale(0.97);
+      }
+
+      .btn-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .btn-danger {
+        background: #e53e3e;
+        color: #fff;
+        border: none;
+        padding: 12px 32px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: all 0.25s;
+        box-shadow: 0 4px 16px rgba(229, 62, 62, 0.35);
+      }
+
+      .btn-danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(229, 62, 62, 0.45);
+      }
+
+      .btn-success {
+        background: #38a169;
+        color: #fff;
+        border: none;
+        padding: 14px 40px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: all 0.25s;
+        box-shadow: 0 4px 16px rgba(56, 161, 105, 0.35);
+      }
+
+      .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(56, 161, 105, 0.45);
+      }
+
+      .btn-secondary {
+        background: #e2e8f0;
+        color: #2d3748;
+        border: none;
+        padding: 12px 32px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: all 0.25s;
+      }
+
+      .btn-secondary:hover {
+        background: #cbd5e0;
+      }
+
+      /* ===== SCREEN 2 – EXAM ===== */
+      .exam-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #edf2f7;
+        margin-bottom: 20px;
+      }
+
+      .exam-header .user-info {
+        font-size: 15px;
+        color: #4a5568;
+        font-weight: 500;
+      }
+
+      .exam-header .user-info strong {
+        color: #2d3748;
+      }
+
+      .timer-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #f7fafc;
+        padding: 8px 20px;
+        border-radius: 60px;
+        border: 2px solid #e2e8f0;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2d3748;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .timer-box .icon {
+        font-size: 26px;
+      }
+
+      .timer-box.warning {
+        border-color: #ecc94b;
+        background: #fffff0;
+        color: #b7791f;
+      }
+
+      .timer-box.danger {
+        border-color: #e53e3e;
+        background: #fff5f5;
+        color: #c53030;
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+
+      .exam-progress {
+        font-size: 14px;
+        color: #718096;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .exam-progress span {
+        font-weight: 700;
+        color: #2d3748;
+      }
+
+      .questions-list {
+        max-height: 560px;
+        overflow-y: auto;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      .questions-list::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .questions-list::-webkit-scrollbar-track {
+        background: #edf2f7;
+        border-radius: 10px;
+      }
+
+      .questions-list::-webkit-scrollbar-thumb {
+        background: #cbd5e0;
+        border-radius: 10px;
+      }
+
+      .question-item {
+        background: #f7fafc;
+        border-radius: 16px;
+        padding: 18px 22px;
+        margin-bottom: 16px;
+        border: 2px solid #edf2f7;
+        transition: border 0.2s;
+      }
+
+      .question-item.answered {
+        border-color: #bee3f8;
+      }
+
+      .question-item .q-header {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .question-item .q-number {
+        font-weight: 700;
+        color: #4a6cf7;
+        font-size: 15px;
+        min-width: 36px;
+      }
+
+      .question-item .q-text {
+        font-size: 17px;
+        font-weight: 500;
+        color: #2d3748;
+        line-height: 1.6;
+      }
+
+      .options-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 4px;
+      }
+
+      @media (max-width: 640px) {
+        .options-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .option-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 2px solid #e2e8f0;
+        background: #ffffff;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-size: 15px;
+        color: #2d3748;
+        font-weight: 500;
+        font-family: inherit;
+        text-align: right;
+        width: 100%;
+      }
+
+      .option-btn:hover:not(.locked) {
+        border-color: #4a6cf7;
+        background: #ebf0ff;
+        transform: translateY(-1px);
+      }
+
+      .option-btn .letter {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #edf2f7;
+        font-weight: 700;
+        font-size: 14px;
+        color: #4a5568;
+        flex-shrink: 0;
+        transition: 0.15s;
+      }
+
+      .option-btn.correct .letter {
+        background: #38a169;
+        color: #fff;
+      }
+
+      .option-btn.wrong .letter {
+        background: #e53e3e;
+        color: #fff;
+      }
+
+      .option-btn.show-correct .letter {
+        background: #e53e3e;
+        color: #fff;
+      }
+
+      .option-btn.correct {
+        border-color: #38a169;
+        background: #f0fff4;
+      }
+
+      .option-btn.wrong {
+        border-color: #e53e3e;
+        background: #fff5f5;
+      }
+
+      .option-btn.show-correct {
+        border-color: #e53e3e;
+        background: #fff5f5;
+        border-style: dashed;
+      }
+
+      .option-btn.locked {
+        cursor: default;
+        opacity: 0.85;
+      }
+
+      .option-btn.locked:hover {
+        transform: none;
+        border-color: #e2e8f0;
+      }
+
+      .option-btn.locked.correct:hover {
+        border-color: #38a169;
+        background: #f0fff4;
+      }
+
+      .option-btn.locked.wrong:hover {
+        border-color: #e53e3e;
+        background: #fff5f5;
+      }
+
+      .option-btn .check-icon {
+        margin-right: auto;
+        font-size: 18px;
+      }
+
+      .exam-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 2px solid #edf2f7;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .answer-status {
+        font-size: 14px;
+        color: #718096;
+        text-align: center;
+        padding: 8px 0;
+      }
+
+      /* ===== SCREEN 3 – RESULTS ===== */
+      #screen3 {
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      #screen3 .result-icon {
+        font-size: 72px;
+        margin-bottom: 8px;
+      }
+
+      #screen3 h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 6px;
+      }
+
+      #screen3 .result-sub {
+        font-size: 17px;
+        color: #718096;
+        margin-bottom: 24px;
+      }
+
+      .score-display {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 8px;
+        background: #f7fafc;
+        padding: 16px 40px;
+        border-radius: 60px;
+        margin-bottom: 16px;
+        border: 2px solid #e2e8f0;
+      }
+
+      .score-display .number {
+        font-size: 52px;
+        font-weight: 800;
+        color: #2d3748;
+      }
+
+      .score-display .total {
+        font-size: 24px;
+        color: #718096;
+        font-weight: 600;
+      }
+
+      .score-display .label {
+        font-size: 18px;
+        color: #4a5568;
+        margin-right: 6px;
+      }
+
+      .result-stats {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin: 20px 0 28px;
+      }
+
+      .result-stats .stat {
+        text-align: center;
+      }
+
+      .result-stats .stat .num {
+        font-size: 28px;
+        font-weight: 700;
+        display: block;
+      }
+
+      .result-stats .stat .num.green {
+        color: #38a169;
+      }
+      .result-stats .stat .num.red {
+        color: #e53e3e;
+      }
+      .result-stats .stat .num.gold {
+        color: #d69e2e;
+      }
+
+      .result-stats .stat .desc {
+        font-size: 14px;
+        color: #718096;
+        margin-top: 2px;
+      }
+
+      .result-actions {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+
+      /* ===== GOOGLE FORM ===== */
+      .google-form-wrapper {
+        margin: 20px auto 0;
+        max-width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 2px solid #edf2f7;
+        background: #f7fafc;
+        display: none;
+      }
+
+      .google-form-wrapper.active {
+        display: block;
+      }
+
+      .google-form-wrapper iframe {
+        width: 100%;
+        height: 520px;
+        border: none;
+        display: block;
+      }
+
+      .form-submit-msg {
+        font-size: 15px;
+        color: #38a169;
+        font-weight: 600;
+        margin-top: 12px;
+      }
+
+      .form-config-note {
+        font-size: 13px;
+        color: #718096;
+        background: #f7fafc;
+        padding: 14px 18px;
+        border-radius: 12px;
+        margin-top: 12px;
+        text-align: right;
+        border: 1px solid #e2e8f0;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .form-config-note code {
+        background: #edf2f7;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-size: 13px;
+        color: #2d3748;
+        direction: ltr;
+        display: inline-block;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px 16px;
+        }
+
+        #screen1 h1 {
+          font-size: 26px;
+        }
+
+        .exam-header {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 10px;
+        }
+
+        .timer-box {
+          justify-content: center;
+          font-size: 20px;
+          padding: 6px 16px;
+        }
+
+        .question-item {
+          padding: 14px 16px;
+        }
+
+        .question-item .q-text {
+          font-size: 15px;
+        }
+
+        .option-btn {
+          font-size: 14px;
+          padding: 10px 14px;
+        }
+
+        .score-display .number {
+          font-size: 40px;
+        }
+
+        .result-stats {
+          gap: 20px;
+        }
+
+        .btn-primary {
+          padding: 14px 32px;
+          font-size: 18px;
+        }
+
+        .questions-list {
+          max-height: 420px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 14px 10px;
+          border-radius: 16px;
+        }
+
+        .options-grid {
+          gap: 8px;
+        }
+
+        .option-btn {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+
+        .option-btn .letter {
+          width: 26px;
+          height: 26px;
+          font-size: 12px;
+        }
+
+        .exam-header .user-info {
+          font-size: 13px;
+          text-align: center;
+        }
+
+        .timer-box {
+          font-size: 18px;
+        }
+
+        .score-display {
+          padding: 12px 24px;
+        }
+
+        .score-display .number {
+          font-size: 34px;
+        }
+      }
+
+      .text-muted {
+        color: #718096;
+      }
+      .mt-8 {
+        margin-top: 8px;
+      }
+      .mb-8 {
+        margin-bottom: 8px;
+      }
+
+      .spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.6s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="app">
+      <!-- ============================================================ -->
+      <!-- SCREEN 1 – LOGIN                                               -->
+      <!-- ============================================================ -->
+      <div class="screen active" id="screen1">
+        <div class="logo-icon">📘</div>
+        <h1>الاختبار العميق</h1>
+        <p class="subtitle">
+          38 سؤالاً · 25 دقيقة · متاح يوميًا من 8:30 م إلى 10:30 م بتوقيت
+          القاهرة
+        </p>
+
+        <div class="form-group">
+          <label for="userName">الاسم الكامل</label>
+          <input
+            type="text"
+            id="userName"
+            placeholder="أدخل اسمك الكامل"
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="userPhone">رقم التليفون</label>
+          <input
+            type="tel"
+            id="userPhone"
+            placeholder="أدخل رقم التليفون"
+            autocomplete="tel"
+          />
+        </div>
+
+        <button class="btn-primary" id="btnStart">
+          <span>ابدأ الامتحان</span>
+          <span>⏱</span>
+        </button>
+        <div
+          id="availabilityStatus"
+          style="
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #f7fafc;
+            font-size: 14px;
+            line-height: 1.7;
+          "
+        ></div>
+        <div
+          id="loginError"
+          style="
+            color: #e53e3e;
+            margin-top: 12px;
+            font-size: 14px;
+            min-height: 22px;
+          "
+        ></div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- SCREEN 2 – EXAM                                               -->
+      <!-- ============================================================ -->
+      <div class="screen" id="screen2">
+        <div class="exam-header">
+          <div class="user-info">
+            👤 <strong id="displayName">—</strong> &nbsp;|&nbsp; 📱
+            <strong id="displayPhone">—</strong>
+          </div>
+          <div class="timer-box" id="timerBox">
+            <span class="icon">⏳</span>
+            <span id="timerDisplay">25:00</span>
+          </div>
+        </div>
+
+        <div class="exam-progress">
+          تم الإجابة على <span id="answeredCount">0</span> من
+          <span id="totalQuestions">38</span> سؤال
+        </div>
+
+        <div class="questions-list" id="questionsContainer"></div>
+
+        <div class="exam-footer">
+          <button class="btn-danger" id="btnSubmit">إنهاء الامتحان</button>
+          <button class="btn-secondary" id="btnResetExam">إعادة تعيين</button>
+        </div>
+        <div class="answer-status" id="answerStatus"></div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- SCREEN 3 – RESULTS                                            -->
+      <!-- ============================================================ -->
+      <div class="screen" id="screen3">
+        <div class="result-icon" id="resultIcon">🏆</div>
+        <h2>النتيجة النهائية</h2>
+        <p class="result-sub" id="resultSub">لقد أنهيت الامتحان</p>
+
+        <div class="score-display">
+          <span class="number" id="finalScore">0</span>
+          <span class="label">من</span>
+          <span class="total" id="finalTotal">38</span>
+        </div>
+
+        <div class="result-stats">
+          <div class="stat">
+            <span class="num green" id="statCorrect">0</span>
+            <span class="desc">✅ إجابات صحيحة</span>
+          </div>
+          <div class="stat">
+            <span class="num red" id="statWrong">0</span>
+            <span class="desc">❌ إجابات خاطئة</span>
+          </div>
+          <div class="stat">
+            <span class="num gold" id="statUnanswered">0</span>
+            <span class="desc">⏳ لم يُجب عليها</span>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn-success" id="btnSendToForm">📤 حفظ النتيجة</button>
+          <button class="btn-secondary" id="btnRetry">🔄 العودة للبداية</button>
+        </div>
+        <div
+          id="formStatus"
+          class="form-submit-msg"
+          style="display: none"
+        ></div>
+      </div>
+    </div>
+
+    <script>
+      // ================================================================
+      // CONFIG
+      // ================================================================
+      // ضع هنا رابط Google Apps Script المنشور والمنتهي بـ /exec
+      const RESULTS_API_URL =
+        "https://script.google.com/macros/s/AKfycbyT8F0joGV_S1xmAnUYayC3ZLvHlp82eX7y5z_xMKRiTlJzhaJaKT6f7sZcSWxzkIjF/exec";
+
+      const EXAM_DURATION_SECONDS = 25 * 60;
+      const OPEN_HOUR = 20; // 8:30 مساءً بتوقيت القاهرة
+      const OPEN_MINUTE = 30;
+      const CLOSE_HOUR = 22; // 10:30 مساءً بتوقيت القاهرة
+      const CLOSE_MINUTE = 30;
+      const ATTEMPT_STORAGE_KEY = "church_exam_active_attempt_v1";
+
+      // ================================================================
+      //  DATA – 38 سؤال من الملف المرفق
+      // ================================================================
+      const QUESTIONS = [
+        {
+          id: 1,
+          question:
+            'لو كنت في جلسة فردية مع شاب متعلم يقول: "أنا مش مقتنع بوجود الله لأن لو كان موجود كان هيظهر نفسه"، أي من الردود التالية يعكس تطبيقًا خاطئًا لمنهج الدفاعيات كما ورد في المقدمة؟',
+          options: [
+            "أشرح له أن الله أظهر نفسه في المسيح وهناك أدلة تاريخية على ذلك.",
+            "أبدأ بالاستماع لمعرفة هل لديه صدمة عائلية خلف هذا السؤال.",
+            'أقدم له كتاب "وهم الإله" وأطلب منه قراءته للرد عليه.',
+            'أسأله: "لو افترضنا أن الله ظهر لك الآن، هل ستؤمن به؟" لأكتشف السبب الحقيقي.',
+          ],
+          correct: 2,
+        },
+        {
+          id: 2,
+          question:
+            'ما هي "المغالطة المنطقية" التي قد يرتكبها خادم الدفاعيات إذا قال لمتألم: "ربنا بيحبك عشان كده باعتلك الألم عشان تتعلم الصبر"؟',
+          options: [
+            'إنها تمثل تطبيقًا صحيحًا لمبدأ "ضابط الكل".',
+            'إنها تخلط بين "السماح بالشر" و"إرسال الشر" وتنسب لله ما هو من عمل عدو الخير.',
+            'إنها تفسير صحيح لقول "في كل ضيقهم تضايق".',
+            'إنها تطبيق عملي لمبدأ "الرضا مقابل السماح".',
+          ],
+          correct: 1,
+        },
+        {
+          id: 3,
+          question:
+            'إذا صممنا اختبارًا لقياس "الاتساق المنطقي" في عقيدة، فأي من التالي يمثل تطبيقًا عمليًا لهذا المبدأ كما ورد في الملف؟',
+          options: [
+            "نفحص هل تفسير هذه العقيدة للحياة متفق مع تفسيرها للأخلاق؟",
+            "نفحص كم عدد أتباعها.",
+            "نفحص عمرها التاريخي.",
+            "نفحص مدى جمال طقوسها.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 4,
+          question:
+            'لو استخدمت الكنيسة في صلاة المريض طلبًا واحدًا فقط هو "أشفه يا رب" بدلاً من الطلبات السبعة، ما هو الجانب الذي قد تخسره؟',
+          options: [
+            "لن تخسر شيئًا، فالشفاء هو الأهم.",
+            "ستخسر فكرة أن تدبير الله قد يكون بالراحة أو النعمة أو المعونة، وليس فقط بالشفاء الجسدي.",
+            "ستكون لصلاة قصيرة ومملة.",
+            "ينبغي في الصلوات الليتورجية أن تستخدم مترادفات كثيرة لتأكيد المعنى.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 5,
+          question:
+            'في قصة المسيح مع المرأة الممسوكة بالخطية، لو قال أحدهم: "المسيح تهاون مع الزنا"، كيف ترد دفاعيًا باستخدام منطق الألم والفداء معًا؟',
+          options: [
+            'المسيح لم يتهاون بل قال "لا تخطئي أيضًا".',
+            "المسيح أخذ العقوبة في جسده على الصليب بدلاً عنها، وهذا هو جوهر الفداء ليس تهاونًا.",
+            "القانون كان يجب أن ينفذ، لكن المسيح كان فوق القانون.",
+            "المسيح أنكر أنها أخطأت وألغى حكم العقوبة.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 6,
+          question:
+            "لو كان خادم دفاعيات يتعامل مع شاب يشك في وجود الله بسبب وفاة والده، ما هي الخطوة الأكثر إهمالاً التي قد يرتكبها؟",
+          options: [
+            "تقديم أدلة على وجود الله مباشرة.",
+            "الاستماع لقصته أولاً دون مقاطعة.",
+            "الاعتذار عن وفاة والده.",
+            "الصلاة معه في نهاية الجلسة.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 7,
+          question:
+            'ما هو الافتراض الخفي الذي يقوم عليه طلب الكنيسة "أعطه يا رب رحمة" في صلاة المريض؟',
+          options: [
+            "أن الشفاء الجسدي هو التدخل الوحيد الممكن.",
+            "أن الله قد يتدخل ليرفع الألم معجزيًا إذا شاء.",
+            "أن المريض يستحق الألم.",
+            "أن الألم لا يمكن أن يزول أبدًا.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 8,
+          question:
+            'لو قال متشكك: "المسيحية دين انتحاري بسبب استشهاد الأولين"، أي من التالي يمثل دفاعًا عن المفهوم المسيحي للاستشهاد مستفادًا من شهداء ليبيا؟',
+          options: [
+            "الاستشهاد دليل ضعف وليس قوة.",
+            "الاستشهاد تحويل للشر إلى خير وشهادة للعالم، وليس مجرد موت.",
+            "الدولة جابت حق الشهداء وتهتم بأسرهم.",
+            "الاستشهاد دليل على قوة الشر وسيطرته.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 9,
+          question:
+            'ما هو التطبيق الخاطئ لمبدأ "كفاية الأدلة" في حوار مع ملحد؟',
+          options: [
+            "الاكتفاء بشهادة المؤرخين عن المسيح.",
+            "الانتظار حتى يأتي دليل قطعي مادي 100% قبل الإيمان.",
+            "الاستناد إلى المخطوطات القديمة.",
+            "الاستناد إلى شهادة 500 شخص رأوا المسيح بعد القيامة.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 10,
+          question:
+            "لو صممت برنامجًا تدريبيًا لخدام الدفاعيات، أي من التالي يجب أن يكون الأول في المنهج؟",
+          options: [
+            "دراسة فلسفات الأديان المقارنة.",
+            "تدريب على الاستماع واكتشاف الأسباب الخفية للتشكيك.",
+            "حفظ الردود على الأسئلة الشائعة.",
+            "إتقان فن الجدال والمناظرة.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 11,
+          question:
+            'ماذا يعني أن يكون الخادم "تلميذًا للكنيسة" عمليًا في جلسة فردية؟',
+          options: [
+            "أن يلتزم بتعاليم الآباء ولا يبتكر عقائد جديدة من رأسه.",
+            "أن يكون صغير السن حتى يفهم لغة وثقافة الشباب.",
+            "أن يحضر كل اجتماعات الكنيسة.",
+            "أن يرتدي زيًا كهنوتيًا.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 12,
+          question:
+            'ما هو البعد الدفاعي في صلاة "فلنشكر صانع الخيرات" في طقس مسحة المرضى؟',
+          options: [
+            "هي طلبة لتذكير الإنسان أن الله يرسل له التجربة لخيره.",
+            "هو إعلان أن الله مصدر الخير وليس الشر، حتى لو كان الألم موجودًا.",
+            "هو طلب شفاء.",
+            "هي صلاة افتتاحية تقال في كل المناسبات.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 13,
+          question:
+            'لو طبقنا مبدأ "الاتساق المنطقي" على عقيدة إلحادية تدعو للتسامي الأخلاقي، أي تناقض نكتشفه؟',
+          options: [
+            "الإلحاد لا يؤمن بالله، فما هو الهدف من الأخلاق ومن الذي يحدد المعايير الأخلاقية؟ هذا غير متماسك لأنه يبني الأخلاق على فراغ.",
+            "الإلحاد عقيدة متماسكة.",
+            "الإلحاد يؤمن بالخير لكنه ينكر وجود الله.",
+            "الإلحاد يعتمد على العلم الحقيقي فقط ويتجاهل الخرافات.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 14,
+          question:
+            'ما هو الافتراض الذي يجب أن يفكر فيه خادم الدفاعيات أولاً عند سماع سؤال "لماذا الله خلق الشر؟"؟',
+          options: [
+            "أن السائل يبحث عن إجابة منطقية.",
+            "أن السائل في حالة ألم نفسي يحتاج إلى مواساة قبل الإجابة.",
+            "أن السائل ملحد يستدرجني لإجابة محددة.",
+            "أن السائل يريد تغيير موضوع الحديث.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 15,
+          question:
+            'كيف يمكن تطبيق مبدأ "السماح" مقابل "الرضا" في تفسير كارثة طبيعية؟',
+          options: [
+            "الله يرضى بالكارثة لأنه يريد تأديب البشر.",
+            "الله يسمح بالكارثة لحكمة لكنه لا يرضى بها، وهو يتألم مع المتضررين.",
+            "الله لا يسمح ولا يرضى، بل هي نتيجة طبيعية للتعاملات البشرية والأحداث.",
+            "الله يسبب الكارثة ليمنح الشهداء مكانة.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 16,
+          question:
+            'لو قال متشكك: "لو كان الله يحب البشر لما كان في ألم"، أي من الردود التالية يتجاهل جوهر الفداء المسيحي؟',
+          options: [
+            "الله نزل وتألم معنا على الصليب، هذا دليل حبه.",
+            "الله سيحول كل ألم إلى خير في النهاية.",
+            "الألم نتيجة حرية الإنسان وليس من الله.",
+            "الله لا يهتم بالألم الجسدي، بل بالروح.",
+          ],
+          correct: 3,
+        },
+        {
+          id: 17,
+          question:
+            "ما هو الاستنتاج الدفاعي من سؤال الأنبا أنطونيوس لله عن الألم والتجارب التي تصيب الإنسان؟",
+          options: [
+            "أن الأسئلة عن حكمة الله غير مسموح بها.",
+            "أن العقل البشري محدود، لكن التسليم لله يقود للخلاص.",
+            "أن الله يشرح كل شيء للقديسين فقط.",
+            "أن الصوم هو الطريق الوحيد للمعرفة.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 18,
+          question:
+            'أي من التالي يمثل تطبيقًا صحيحًا لمبدأ "صورة الله" في الجلسة الفردية؟',
+          options: [
+            "الهدف هو إثبات الحق وإقناعه أن أفكاره خاطئة لإعادته لصورة الله النقية.",
+            "أنظر له كإنسان يحمل صورة الله، فأتعامل معه بكرامة واحترام، حتى لو كان رافضًا.",
+            "أتجاهل مشاعره وأركز على الأدلة فقط.",
+            "أذكره بخطاياه لإخضاعه.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 19,
+          question:
+            'كيف يمكن التمييز بين "التشكيك في الله" و"التشكيك في الكنيسة" في حوار واحد؟',
+          options: [
+            "لا فرق، فكلاهما في الإيمان.",
+            "الأول يتعلق بوجود الله وطبيعته، والثاني يتعلق بالأسرار والطقوس والسلطات الكنسية.",
+            "التشكيك في الله أعمق، وفي الكنيسة أسهل.",
+            "التشكيك في الكنيسة هو تشكيك في الله.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 20,
+          question: "ما هو الجانب الدفاعي في استشهاد الـ21 قبطي في ليبيا؟",
+          options: [
+            "أن الإيمان القبطي أثبت أنه الأقوى.",
+            "أن الله حوّل مأساتهم إلى شهادة عالمية جذبت انتباه العالم للكنيسة القبطية وصنع معجزات.",
+            "لو كان الله صالحًا وقادرًا لماذا لم يحمِ أولاده؟",
+            "الاستشهاد ليس له علاقة بالدفاعيات.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 21,
+          question:
+            'لو صممت اختبارًا لقياس "التأثير الإيجابي" لعقيدة ما، أي مؤشر ستستخدمه بحسب ملف "لماذا المسيحية"؟',
+          options: [
+            "عدد الكنائس المنتشرة.",
+            "معدلات الانتحار والأمراض النفسية بين أتباعها.",
+            "عمر العقيدة.",
+            "جمال طقوسها.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 22,
+          question:
+            'ما هو الفرق بين "الراحة" و"البرودة" في صلوات الكنيسة للمريض؟',
+          options: [
+            "الراحة للنفس، والبرودة للجسد.",
+            "الراحة تعني الانتقال إلى السماء، والبرودة تعني السلام الداخلي في الأزمة.",
+            "لا فرق بينهما.",
+            "الراحة للجسد، والبرودة للنفس.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 23,
+          question:
+            'لو قال ملحد: "لا يوجد دليل على وجود الله"، أي من التالي يعد ردًا دفاعيًا لا يعتمد على النصوص المقدسة؟',
+          options: [
+            '"الكتاب المقدس يقول إن الله موجود".',
+            '"حقيقي من الصعب على الإنسان أن يصدق ما لا يراه، لكن هل فكرت في كيف نشأ الكون وجاءت الحياة إلى العالم؟".',
+            '"الإيمان يحتاج إلى قلب".',
+            '"أنت لا تبحث بصدق".',
+          ],
+          correct: 1,
+        },
+        {
+          id: 24,
+          question: 'ما هو التطبيق الخاطئ لمبدأ "الوداعة" في خدمة الدفاعيات؟',
+          options: [
+            "الرد بلطف واحترام مع الحزم.",
+            "التخلي عن الحق لإرضاء المخدوم.",
+            "الاستماع أكثر من الكلام.",
+            "عدم الانفعال عند الرد.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 25,
+          question:
+            'كيف يمكن ربط مفهوم "صانع الخيرات" بمفهوم "مخلوق على صورة الله"؟',
+          options: [
+            "الإنسان في الأبدية سوف يكون على صورة الله في صنع الخير.",
+            "لأن الله صانع الخيرات، فالإنسان صورة الله مدعو لصنع الخير أيضًا مع الآخرين.",
+            "صانع الخيرات يعني الله يخلق كل شيء، وصورة الله تعني أن الإنسان أيضًا يقدر أن يخلق.",
+            "كلاهما يعبر عن عدل الله.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 26,
+          question:
+            "لو كان أمامك شخص يعاني من ألم شديد، أي من العبارات التالية تتناقض مع جوهر رسالة الخدمة؟",
+          options: [
+            '"أنا معاك، ربنا معاك".',
+            '"ده ابتلاء عشان تتنقى".',
+            '"تعالى نعمل حاجة عملية عشان نساعدك".',
+            '"أنا حاسس بيك".',
+          ],
+          correct: 1,
+        },
+        {
+          id: 27,
+          question:
+            "ما هو الاستنتاج الدفاعي من مقارنة المسيحية بالإلحاد في مصير الإنسان؟",
+          options: [
+            "المسيحية تعطي الإنسان قيمة عليا، والإلحاد يجعله مجرد حيوان.",
+            "الإلحاد يعطي الإنسان حرية أكثر.",
+            "المسيحية تحد من الإبداع البشري.",
+            "كلاهما يؤمن بأن الكون أزلي أبدي.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 28,
+          question:
+            'لو قال قائل: "المسيح لم يقل أنا الله في الإنجيل صراحة"، أي من التالي يمثل ردًا دفاعيًا غير سطحي؟',
+          options: [
+            'المسيح قال "أنا والآب واحد" وهذا يعني أنه الله.',
+            "لا يهم لأنه لم يقل ذلك صراحة.",
+            "المسيح لم يقلها لأنها كانت ستُفهم خطأ، لكنه أظهرها بأفعاله (غفران الخطايا، إلخ).",
+            "هذه المقولة صحيحة، المسيح ليس إلهًا.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 29,
+          question:
+            "ما هو الهدف الدفاعي من ذكر الكنيسة لصفات الله (صانع الخيرات، محب البشر، ضابط الكل) في صلاة المريض؟",
+          options: [
+            "تعليم المرضى أساسيات العقيدة المسيحية.",
+            "إعادة تثبيت صورة الله الصحيحة في ذهن المؤمن قبل أن يشكك الألم فيها.",
+            "الله هو الذي يرسل التجربة وهو من يقدر أن يرفعها.",
+            "لإثبات أن الله صالح وله الحق في معاقبة الشرور.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 30,
+          question:
+            "لو كان خادم دفاعيات في جلسة مع شاب يتساءل عن سبب وجود الشر، أي خطأ دفاعي قد يرتكبه؟",
+          options: [
+            "يلفت نظر المخدوم لفكرة حرية الإنسان.",
+            "يستمع لقصته الشخصية أولاً.",
+            "يعرض بالأدلة المنطقية أن الله يرسل غالبًا الشر لتطهير الإنسان من شروره.",
+            "يسأله عن علاقته بوالده.",
+          ],
+          correct: 2,
+        },
+        {
+          id: 31,
+          question:
+            'ما هو المفهوم الخاطئ عن "التشكيك في الكنيسة" بحسب تقسيم المقدمة؟',
+          options: [
+            "أنه يتعلق بأسئلة عن الأسرار والطقوس.",
+            "أنه يتعلق بوجود الله.",
+            "أنه يتعلق بأهمية الشفاعة والقديسين.",
+            "أنه يتعلق بالسلطة الكنسية.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 32,
+          question:
+            'لو قال مفكر: "المسيحية دين مستورد من الحضارة الفرعونية"، أي من التالي يمثل ردًا دفاعيًا يعتمد على منهج الدفاعيات؟',
+          options: [
+            "هذا غير صحيح لأن المسيحية ظهرت في فلسطين.",
+            "لو كان مستوردًا، لماذا قام عليه شهود عيان وكتب مؤرخون في القرن الأول؟ هذا دليل على أصالته.",
+            "لا يهم مصدرها، المهم أنها تؤمن بالله.",
+            "هذه نظرية لا تستحق الرد.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 33,
+          question:
+            "ما هو الدليل الدفاعي في تماسك الكتاب المقدس رغم تعدد كتّابه على 1600 سنة؟",
+          options: [
+            "أنه دليل على وجود إله يوحيه.",
+            "أنه دليل على ذكاء الكتّاب.",
+            "أنه دليل على اتفاق البشر على الحقيقة.",
+            "أنه دليل على المصادفة العجيبة.",
+          ],
+          correct: 0,
+        },
+        {
+          id: 34,
+          question:
+            'لو قال متألم: "ربنا مش بيحبني"، أي من التالي هو أعمق رد يعكس فكر الملفات مجتمعة؟',
+          options: [
+            '"ربنا بيحبك، شوف الصليب".',
+            '"أنا حاسس بيك، وربنا حاسس بيك أكتر. هو نزل وتألم عشانك، وهو مش راضي باللي حصلك، بس هو بيدبرلك خير".',
+            '"أنت غلطان، ربنا بيحب كل الناس".',
+            '"صلي وهتحس بحبه".',
+          ],
+          correct: 1,
+        },
+        {
+          id: 35,
+          question:
+            'ما هو التطبيق الدفاعي لمبدأ "السماح بالشر" في التربية الروحية؟',
+          options: [
+            "السماح يعني أن الله يتركنا نعاني لنتعلم الصبر.",
+            "السماح يعني أن الله لا يفرض إرادته بالقوة، بل يترك حرية الخيار لكنه يوجه النتيجة للخير.",
+            "السماح يعني أن الشر دائمًا عقوبة على شر المتألم.",
+            "السماح يعني رضا الله بالشر.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 36,
+          question:
+            'لو صممت اختبارًا لقياس "التأثير الاجتماعي" للعقيدة، أي مؤشر ستستخدمه بحسب الملف؟',
+          options: [
+            "عدد المعابد.",
+            "مستوى الفن والأدب المنتَجَين في حضارتها.",
+            "عدد الحروب التي خاضتها.",
+            "عمر العقيدة.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 37,
+          question:
+            "ما هو الجانب الدفاعي في أن الكنيسة تشير في صلاة المريض إلى غفران الخطايا؟",
+          options: [
+            "لأن الألم دائمًا عقاب للخطية.",
+            "لأن الألم قد يكون فرصة للتوبة، لكن ليس كل ألم عقابًا.",
+            "لأن المريض مذنب دائمًا.",
+            "لأن التوبة هي العلاج الوحيد للألم.",
+          ],
+          correct: 1,
+        },
+        {
+          id: 38,
+          question:
+            'لو قال قائل: "الإيمان لا يحتاج إلى عقل"، أي من التالي يمثل ردًا دفاعيًا مستفادًا من الملفات الثلاثة؟',
+          options: [
+            "هذا صحيح، الإيمان قلب فقط.",
+            "العقل أداة مهمة لفهم الإيمان والرد على الأسئلة، لكنه ليس بديلاً عن القلب.",
+            "العقل لا قيمة له في الإيمان.",
+            "الإيمان فوق العقل، فلا نستخدم العقل.",
+          ],
+          correct: 1,
+        },
+      ];
+
+      // ================================================================
+      //  STATE
+      // ================================================================
+      const TOTAL = QUESTIONS.length;
+      let userAnswers = new Array(TOTAL).fill(null); // index of selected option, or null
+      let userName = "";
+      let userPhone = "";
+      let timerInterval = null;
+      let timeSeconds = EXAM_DURATION_SECONDS;
+      let examEnded = false;
+      let examStartTime = null;
+      let resultSent = false;
+
+      // ================================================================
+      //  DOM REFS
+      // ================================================================
+      const screen1 = document.getElementById("screen1");
+      const screen2 = document.getElementById("screen2");
+      const screen3 = document.getElementById("screen3");
+      const userNameInput = document.getElementById("userName");
+      const userPhoneInput = document.getElementById("userPhone");
+      const btnStart = document.getElementById("btnStart");
+      const loginError = document.getElementById("loginError");
+      const availabilityStatus = document.getElementById("availabilityStatus");
+      const displayName = document.getElementById("displayName");
+      const displayPhone = document.getElementById("displayPhone");
+      const timerDisplay = document.getElementById("timerDisplay");
+      const timerBox = document.getElementById("timerBox");
+      const answeredCount = document.getElementById("answeredCount");
+      const totalQuestions = document.getElementById("totalQuestions");
+      const questionsContainer = document.getElementById("questionsContainer");
+      const btnSubmit = document.getElementById("btnSubmit");
+      const btnResetExam = document.getElementById("btnResetExam");
+      const btnRetry = document.getElementById("btnRetry");
+      const btnSendToForm = document.getElementById("btnSendToForm");
+      const finalScore = document.getElementById("finalScore");
+      const finalTotal = document.getElementById("finalTotal");
+      const statCorrect = document.getElementById("statCorrect");
+      const statWrong = document.getElementById("statWrong");
+      const statUnanswered = document.getElementById("statUnanswered");
+      const resultIcon = document.getElementById("resultIcon");
+      const resultSub = document.getElementById("resultSub");
+      const formStatus = document.getElementById("formStatus");
+
+      totalQuestions.textContent = TOTAL;
+
+      // ================================================================
+      //  FUNCTIONS
+      // ================================================================
+      function getCairoTimeParts() {
+        const parts = new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Africa/Cairo",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hourCycle: "h23",
+        }).formatToParts(new Date());
+        const values = {};
+        parts.forEach((part) => {
+          if (part.type !== "literal") values[part.type] = Number(part.value);
+        });
+        return values;
+      }
+
+      function getAvailability() {
+        const now = getCairoTimeParts();
+        const currentMinutes = now.hour * 60 + now.minute;
+        const openMinutes = OPEN_HOUR * 60 + OPEN_MINUTE;
+        const closeMinutes = CLOSE_HOUR * 60 + CLOSE_MINUTE;
+        return {
+          isOpen:
+            currentMinutes >= openMinutes && currentMinutes < closeMinutes,
+          currentMinutes,
+          openMinutes,
+          closeMinutes,
+        };
+      }
+
+      function updateAvailabilityStatus() {
+        const availability = getAvailability();
+        if (availability.isOpen) {
+          availabilityStatus.style.color = "#276749";
+          availabilityStatus.style.background = "#f0fff4";
+          availabilityStatus.textContent =
+            "✅ الامتحان متاح الآن. بعد الضغط على ابدأ سيكون أمامك 25 دقيقة كاملة.";
+          btnStart.disabled = false;
+        } else if (availability.currentMinutes < availability.openMinutes) {
+          availabilityStatus.style.color = "#975a16";
+          availabilityStatus.style.background = "#fffaf0";
+          availabilityStatus.textContent =
+            "⏳ الامتحان لم يبدأ بعد. يبدأ الساعة 8:30 مساءً بتوقيت القاهرة.";
+          btnStart.disabled = true;
+        } else {
+          availabilityStatus.style.color = "#c53030";
+          availabilityStatus.style.background = "#fff5f5";
+          availabilityStatus.textContent =
+            "🔒 انتهى وقت دخول الامتحان اليوم. يُغلق الدخول الساعة 10:30 مساءً بتوقيت القاهرة.";
+          btnStart.disabled = true;
+        }
+      }
+
+      function saveActiveAttempt() {
+        localStorage.setItem(
+          ATTEMPT_STORAGE_KEY,
+          JSON.stringify({
+            userName,
+            userPhone,
+            examStartTime,
+            userAnswers,
+          }),
+        );
+      }
+
+      function clearActiveAttempt() {
+        localStorage.removeItem(ATTEMPT_STORAGE_KEY);
+      }
+
+      function renderQuestions() {
+        let html = "";
+        QUESTIONS.forEach((q, idx) => {
+          const selected = userAnswers[idx];
+          const letters = ["أ", "ب", "ج", "د"];
+          html += `
+                    <div class="question-item" id="qitem-${idx}" data-qindex="${idx}">
+                        <div class="q-header">
+                            <span class="q-number">س ${idx + 1}</span>
+                            <span class="q-text">${q.question}</span>
+                        </div>
+                        <div class="options-grid">
+                `;
+          q.options.forEach((opt, optIdx) => {
+            const letter = letters[optIdx];
+            let cls = "option-btn";
+            let locked = false;
+            if (selected !== null) {
+              locked = true;
+              cls += " locked";
+              if (selected === optIdx) {
+                if (optIdx === q.correct) {
+                  cls += " correct";
+                } else {
+                  cls += " wrong";
+                }
+              }
+              // show correct answer if user was wrong
+              if (selected !== q.correct && optIdx === q.correct) {
+                cls += " show-correct";
+              }
+            }
+            const checkMark = selected === optIdx ? " ✅" : "";
+            html += `
+                        <button class="${cls}" data-q="${idx}" data-opt="${optIdx}" ${locked ? "disabled" : ""}>
+                            <span class="letter">${letter}</span>
+                            <span>${opt}${checkMark}</span>
+                        </button>
+                    `;
+          });
+          html += `
+                        </div>
+                    </div>
+                `;
+        });
+        questionsContainer.innerHTML = html;
+
+        // attach click events to all option buttons
+        document
+          .querySelectorAll(".option-btn:not([disabled])")
+          .forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              if (examEnded) return;
+              const qIdx = parseInt(this.dataset.q);
+              const optIdx = parseInt(this.dataset.opt);
+              handleAnswer(qIdx, optIdx);
+            });
+          });
+
+        updateProgress();
+      }
+
+      function handleAnswer(qIdx, optIdx) {
+        if (examEnded) return;
+        if (userAnswers[qIdx] !== null) return; // already answered
+
+        userAnswers[qIdx] = optIdx;
+        saveActiveAttempt();
+        renderQuestions();
+        updateProgress();
+        checkAllAnswered();
+      }
+
+      function updateProgress() {
+        const answered = userAnswers.filter((a) => a !== null).length;
+        answeredCount.textContent = answered;
+      }
+
+      function checkAllAnswered() {
+        const answered = userAnswers.filter((a) => a !== null).length;
+        if (answered === TOTAL) {
+          // all answered – auto submit after a small delay? we let user submit manually.
+          document.getElementById("answerStatus").textContent =
+            '✅ جميع الأسئلة تم الإجابة عليها! اضغط "إنهاء الامتحان" لحساب النتيجة.';
+        } else {
+          document.getElementById("answerStatus").textContent =
+            `⏳ متبقي ${TOTAL - answered} سؤال`;
+        }
+      }
+
+      function startTimer() {
+        if (timerInterval) clearInterval(timerInterval);
+        if (!examStartTime) examStartTime = Date.now();
+
+        const tick = () => {
+          const elapsed = Math.floor((Date.now() - examStartTime) / 1000);
+          timeSeconds = Math.max(0, EXAM_DURATION_SECONDS - elapsed);
+          updateTimerDisplay();
+
+          if (timeSeconds <= 0) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            endExam("⏰ انتهت مدة الـ25 دقيقة! تم تسليم الامتحان تلقائيًا.");
+            return;
+          }
+
+          if (timeSeconds <= 60) {
+            timerBox.classList.add("danger");
+            timerBox.classList.remove("warning");
+          } else if (timeSeconds <= 300) {
+            timerBox.classList.add("warning");
+            timerBox.classList.remove("danger");
+          } else {
+            timerBox.classList.remove("warning", "danger");
+          }
+        };
+
+        tick();
+        timerInterval = setInterval(tick, 1000);
+      }
+
+      function updateTimerDisplay() {
+        const mins = Math.floor(timeSeconds / 60);
+        const secs = timeSeconds % 60;
+        timerDisplay.textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+      }
+
+      function endExam(message) {
+        if (examEnded) return;
+        examEnded = true;
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        // lock all questions
+        document.querySelectorAll(".option-btn").forEach((btn) => {
+          btn.disabled = true;
+          btn.classList.add("locked");
+        });
+        // show result
+        showResults(message);
+      }
+
+      function showResults(message) {
+        // calculate score
+        let correct = 0;
+        let wrong = 0;
+        let unanswered = 0;
+        userAnswers.forEach((ans, idx) => {
+          if (ans === null) {
+            unanswered++;
+          } else if (ans === QUESTIONS[idx].correct) {
+            correct++;
+          } else {
+            wrong++;
+          }
+        });
+
+        // show screen 3
+        screen2.classList.remove("active");
+        screen3.classList.add("active");
+
+        finalScore.textContent = correct;
+        finalTotal.textContent = TOTAL;
+        statCorrect.textContent = correct;
+        statWrong.textContent = wrong;
+        statUnanswered.textContent = unanswered;
+
+        if (message) {
+          resultSub.textContent = message;
+        } else {
+          resultSub.textContent = "لقد أنهيت الامتحان بنجاح!";
+        }
+
+        // icon based on score
+        if (correct >= 30) resultIcon.textContent = "🏆";
+        else if (correct >= 20) resultIcon.textContent = "📚";
+        else resultIcon.textContent = "💪";
+
+        const durationSeconds = examStartTime
+          ? Math.min(
+              EXAM_DURATION_SECONDS,
+              Math.max(0, Math.floor((Date.now() - examStartTime) / 1000)),
+            )
+          : 0;
+
+        window._examResult = {
+          userName,
+          userPhone,
+          score: correct,
+          total: TOTAL,
+          correct,
+          wrong,
+          unanswered,
+          duration: durationSeconds,
+          answers: userAnswers.map((answer, index) => ({
+            question: QUESTIONS[index].id,
+            selected: answer === null ? null : answer + 1,
+            correctAnswer: QUESTIONS[index].correct + 1,
+            isCorrect: answer === QUESTIONS[index].correct,
+          })),
+        };
+
+        clearActiveAttempt();
+        sendResultToSheet();
+      }
+
+      async function sendResultToSheet() {
+        if (resultSent) {
+          formStatus.style.display = "block";
+          formStatus.textContent = "✅ تم إرسال النتيجة من قبل.";
+          return;
+        }
+
+        if (!RESULTS_API_URL || RESULTS_API_URL.includes("PUT_YOUR")) {
+          formStatus.style.display = "block";
+          formStatus.style.color = "#e53e3e";
+          formStatus.textContent =
+            "⚠️ ضع رابط Google Apps Script المنتهي بـ /exec داخل RESULTS_API_URL.";
+          return;
+        }
+
+        const data = window._examResult;
+        if (!data) return;
+
+        btnSendToForm.disabled = true;
+        btnSendToForm.innerHTML =
+          '<span class="spinner"></span> جارٍ حفظ النتيجة...';
+        formStatus.style.display = "block";
+        formStatus.style.color = "#4a5568";
+        formStatus.textContent = "⏳ جارٍ حفظ النتيجة...";
+
+        const formData = new URLSearchParams();
+        formData.append("name", data.userName);
+        formData.append("phone", data.userPhone);
+        formData.append("score", String(data.score));
+        formData.append("total", String(data.total));
+        formData.append("correct", String(data.correct));
+        formData.append("wrong", String(data.wrong));
+        formData.append("unanswered", String(data.unanswered));
+        formData.append("duration", String(data.duration));
+        formData.append("answers", JSON.stringify(data.answers));
+        formData.append("source", window.location.href);
+
+        try {
+          await fetch(RESULTS_API_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: formData.toString(),
+          });
+          resultSent = true;
+          formStatus.style.color = "#38a169";
+          formStatus.textContent = "✅ تم إرسال النتيجة. يمكنك إغلاق الصفحة.";
+          btnSendToForm.innerHTML = "✅ تم حفظ النتيجة";
+        } catch (error) {
+          console.error(error);
+          formStatus.style.color = "#e53e3e";
+          formStatus.textContent =
+            "❌ تعذر الإرسال. تأكد من الإنترنت واضغط إعادة المحاولة.";
+          btnSendToForm.innerHTML = "🔄 إعادة محاولة الحفظ";
+          btnSendToForm.disabled = false;
+        }
+      }
+
+      function resetAll() {
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        examEnded = false;
+        examStartTime = null;
+        resultSent = false;
+        clearActiveAttempt();
+        userAnswers = new Array(TOTAL).fill(null);
+        timeSeconds = EXAM_DURATION_SECONDS;
+        updateTimerDisplay();
+        timerBox.classList.remove("warning", "danger");
+
+        screen3.classList.remove("active");
+        screen2.classList.remove("active");
+        screen1.classList.add("active");
+
+        document.getElementById("answerStatus").textContent = "";
+        formStatus.style.display = "none";
+        btnSendToForm.disabled = false;
+        btnSendToForm.innerHTML = "📤 حفظ النتيجة";
+
+        userNameInput.value = "";
+        userPhoneInput.value = "";
+        loginError.textContent = "";
+        updateAvailabilityStatus();
+      }
+
+      // ================================================================
+      //  EVENT LISTENERS
+      // ================================================================
+
+      // Start
+      btnStart.addEventListener("click", function () {
+        if (!getAvailability().isOpen) {
+          updateAvailabilityStatus();
+          loginError.textContent =
+            "⚠️ لا يمكن بدء محاولة جديدة خارج وقت الدخول.";
+          return;
+        }
+        const name = userNameInput.value.trim();
+        const phone = userPhoneInput.value.trim();
+        if (!name || !phone) {
+          loginError.textContent = "⚠️ يرجى إدخال الاسم ورقم التليفون";
+          return;
+        }
+        userName = name;
+        userPhone = phone;
+        examStartTime = Date.now();
+        resultSent = false;
+        saveActiveAttempt();
+        displayName.textContent = name;
+        displayPhone.textContent = phone;
+
+        loginError.textContent = "";
+        screen1.classList.remove("active");
+        screen2.classList.add("active");
+
+        renderQuestions();
+        startTimer();
+        document.getElementById("answerStatus").textContent =
+          "⏳ جارٍ الامتحان...";
+      });
+
+      // Submit manually
+      btnSubmit.addEventListener("click", function () {
+        if (examEnded) return;
+        const answered = userAnswers.filter((a) => a !== null).length;
+        if (answered < TOTAL) {
+          if (
+            !confirm(
+              `لم تجب على ${TOTAL - answered} سؤال. هل تريد إنهاء الامتحان الآن؟`,
+            )
+          ) {
+            return;
+          }
+        }
+        endExam("✅ تم إنهاء الامتحان بنجاح!");
+      });
+
+      // Reset exam (from screen 2)
+      btnResetExam.addEventListener("click", function () {
+        if (confirm("هل تريد إعادة تعيين الامتحان؟ سيتم فقدان الإجابات.")) {
+          resetAll();
+        }
+      });
+
+      // Retry (from screen 3)
+      btnRetry.addEventListener("click", function () {
+        resetAll();
+      });
+
+      // Send to Google Form
+      btnSendToForm.addEventListener("click", function () {
+        sendResultToSheet();
+      });
+
+      // Allow Enter key on login
+      userNameInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") btnStart.click();
+      });
+      userPhoneInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") btnStart.click();
+      });
+
+      // ================================================================
+      //  INIT – show screen 1
+      // ================================================================
+      screen1.classList.add("active");
+      screen2.classList.remove("active");
+      screen3.classList.remove("active");
+      totalQuestions.textContent = TOTAL;
+      timeSeconds = EXAM_DURATION_SECONDS;
+      updateTimerDisplay();
+      updateAvailabilityStatus();
+      setInterval(updateAvailabilityStatus, 30000);
+
+      // استعادة محاولة جارية بعد تحديث الصفحة
+      try {
+        const saved = JSON.parse(
+          localStorage.getItem(ATTEMPT_STORAGE_KEY) || "null",
+        );
+        if (
+          saved &&
+          saved.examStartTime &&
+          Date.now() - saved.examStartTime < EXAM_DURATION_SECONDS * 1000
+        ) {
+          userName = saved.userName || "";
+          userPhone = saved.userPhone || "";
+          examStartTime = saved.examStartTime;
+          userAnswers = Array.isArray(saved.userAnswers)
+            ? saved.userAnswers
+            : new Array(TOTAL).fill(null);
+          displayName.textContent = userName;
+          displayPhone.textContent = userPhone;
+          screen1.classList.remove("active");
+          screen2.classList.add("active");
+          renderQuestions();
+          startTimer();
+          document.getElementById("answerStatus").textContent =
+            "♻️ تم استكمال المحاولة بعد تحديث الصفحة.";
+        }
+      } catch (error) {
+        clearActiveAttempt();
+      }
+    </script>
+  </body>
+</html>
