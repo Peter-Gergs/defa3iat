@@ -37,7 +37,7 @@
       .screen {
         display: none;
         animation: fadeIn 0.4s ease;
-      }
+      }c
 
       .screen.active {
         display: block;
@@ -138,7 +138,7 @@
         transform: scale(0.97);
       }
 
-      .btn-primary:disabled {
+      .btn-primary:dabled {
         opacity: 0.5;
         cursor: not-allowed;
         transform: none;
@@ -1390,6 +1390,7 @@
       }
 
       function getAvailability() {
+        return true;
         const now = getCairoTimeParts();
         const currentMinutes = now.hour * 60 + now.minute;
         const openMinutes = OPEN_HOUR * 60 + OPEN_MINUTE;
